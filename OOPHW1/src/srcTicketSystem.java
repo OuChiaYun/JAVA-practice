@@ -1,0 +1,76 @@
+package OOPHW1.src;
+
+import OOPHW1.include.includeTicketSystem.Order;
+import OOPHW1.include.includeTicketSystem.TicketType;
+import OOPHW1.include.TicketSystem;
+
+import java.util.Vector;
+
+public class srcTicketSystem implements TicketSystem {
+
+    public void test() {
+
+        System.out.println("test src");
+    }
+
+    @Override
+    public int CheckTicketPrice(Order ticket) {
+        int price = 0; // 這裡挖空。
+        if (ticket.quantity <= 0) {
+            throw new IllegalArgumentException("There is at least one ticket.");
+        }
+        switch (ticket.type) {
+            case Adult:
+                price = 350;
+                break;
+            case Child:
+                price = 280;
+                break;
+            case Elder:
+                price = 240;
+                break;
+        }
+        return ticket.quantity < 10
+                ? price * ticket.quantity
+                : (int) (price * ticket.quantity * 0.8);
+        // 結束挖空。
+    }
+
+    @Override
+    public int CheckTodaySales(Vector<Order> tickets) {
+        int prices = 0;
+        for (Order i : tickets) {
+            prices += CheckTicketPrice(i);
+        }
+        return prices;
+    }
+
+    @Override
+    public int CheckTodayTicketSales(Vector<Order> tickets) {
+        int total = 0;
+        for (Order i : tickets) {
+            if (i.quantity <= 0)
+                throw new IllegalArgumentException("There need at least one ticket.");
+            total += i.quantity;
+        }
+        return total;
+    }
+
+    @Override
+    public int CheckSpecificTicketSales(TicketType type, Vector<Order> tickets) {
+        int total = 0;
+        for (Order i : tickets) {
+            if (i.type == type) {
+                total += CheckTicketPrice(i);
+            }
+        }
+        return total;
+    }
+
+    @Override
+    public int CheckSpecificOrdersTicketPrice(int idx, Vector<Order> tickets) {
+        if (idx < 0 || idx >= tickets.size())
+            throw new IllegalArgumentException("Index out of range.");
+        return CheckTicketPrice(tickets.get(idx));
+    }
+}
