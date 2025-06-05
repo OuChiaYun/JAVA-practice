@@ -19,8 +19,8 @@ public class ut_ticketsystem {
     public void test_check_ticket_price_should_throw_exception() {
 
         Order ticket = new Order();
-        ticket.setTicketType(TicketType.ADULT);
-        ticket.setQuantity(-1);
+        ticket.SetTicketType(TicketType.ADULT);
+        ticket.SetQuantity(-1);
 
         Throwable thrown = catchThrowable(() -> {
             TicketSystem.CheckTicketPrice(ticket);
@@ -36,8 +36,8 @@ public class ut_ticketsystem {
     public void test_check_ticket_price_should_give_a_discount() {
 
         Order ticket = new Order();
-        ticket.setTicketType(TicketType.ELDER);
-        ticket.setQuantity(10);
+        ticket.SetTicketType(TicketType.ELDER);
+        ticket.SetQuantity(10);
 
         int price = TicketSystem.CheckTicketPrice(ticket);
 
@@ -49,14 +49,14 @@ public class ut_ticketsystem {
     public void test_check_today_sales_have_correct_price() {
 
         Order adult_ticket = new Order(), child_ticket = new Order(), elder_ticket = new Order();
-        adult_ticket.setQuantity(10);
-        adult_ticket.setTicketType(TicketType.ADULT);
+        adult_ticket.SetQuantity(10);
+        adult_ticket.SetTicketType(TicketType.ADULT);
 
-        child_ticket.setQuantity(5);
-        child_ticket.setTicketType(TicketType.CHILD);
+        child_ticket.SetQuantity(5);
+        child_ticket.SetTicketType(TicketType.CHILD);
 
-        elder_ticket.setQuantity(3);
-        elder_ticket.setTicketType(TicketType.ELDER);
+        elder_ticket.SetQuantity(3);
+        elder_ticket.SetTicketType(TicketType.ELDER);
 
         Vector<Order> tickets = new Vector<>();
         tickets.add(adult_ticket);
@@ -73,14 +73,14 @@ public class ut_ticketsystem {
     public void test_check_today_sales_should_throw_exception() {
 
         Order adult_ticket = new Order(), child_ticket = new Order(), elder_ticket = new Order();
-        adult_ticket.setQuantity(10);
-        adult_ticket.setTicketType(TicketType.ADULT);
+        adult_ticket.SetQuantity(10);
+        adult_ticket.SetTicketType(TicketType.ADULT);
 
-        child_ticket.setQuantity(5);
-        child_ticket.setTicketType(TicketType.CHILD);
+        child_ticket.SetQuantity(5);
+        child_ticket.SetTicketType(TicketType.CHILD);
 
-        elder_ticket.setQuantity(-3);
-        elder_ticket.setTicketType(TicketType.ELDER);
+        elder_ticket.SetQuantity(-3);
+        elder_ticket.SetTicketType(TicketType.ELDER);
 
         Vector<Order> tickets = new Vector<>();
         tickets.add(adult_ticket);
@@ -103,14 +103,14 @@ public class ut_ticketsystem {
     public void test_check_today_tickets_sales_have_correct_ticket_amount() {
 
         Order adult_ticket = new Order(), child_ticket = new Order(), elder_ticket = new Order();
-        adult_ticket.setQuantity(10);
-        adult_ticket.setTicketType(TicketType.ADULT);
+        adult_ticket.SetQuantity(10);
+        adult_ticket.SetTicketType(TicketType.ADULT);
 
-        child_ticket.setQuantity(5);
-        child_ticket.setTicketType(TicketType.CHILD);
+        child_ticket.SetQuantity(5);
+        child_ticket.SetTicketType(TicketType.CHILD);
 
-        elder_ticket.setQuantity(3);
-        elder_ticket.setTicketType(TicketType.ELDER);
+        elder_ticket.SetQuantity(3);
+        elder_ticket.SetTicketType(TicketType.ELDER);
 
         Vector<Order> tickets = new Vector<>();
         tickets.add(adult_ticket);
@@ -126,14 +126,14 @@ public class ut_ticketsystem {
     public void test_check_today_tickets_sales_should_throw_exception() {
 
         Order adult_ticket = new Order(), child_ticket = new Order(), elder_ticket = new Order();
-        adult_ticket.setQuantity(10);
-        adult_ticket.setTicketType(TicketType.ADULT);
+        adult_ticket.SetQuantity(10);
+        adult_ticket.SetTicketType(TicketType.ADULT);
 
-        child_ticket.setQuantity(5);
-        child_ticket.setTicketType(TicketType.CHILD);
+        child_ticket.SetQuantity(5);
+        child_ticket.SetTicketType(TicketType.CHILD);
 
-        elder_ticket.setQuantity(-3);
-        elder_ticket.setTicketType(TicketType.ELDER);
+        elder_ticket.SetQuantity(-3);
+        elder_ticket.SetTicketType(TicketType.ELDER);
 
         Vector<Order> tickets = new Vector<>();
         tickets.add(adult_ticket);
@@ -153,14 +153,14 @@ public class ut_ticketsystem {
     public void test_check_specific_tickets_sales_give_correct_amount() {
 
         Order adult_ticket = new Order(), child_ticket = new Order(), elder_ticket = new Order();
-        adult_ticket.setQuantity(10);
-        adult_ticket.setTicketType(TicketType.ADULT);
+        adult_ticket.SetQuantity(10);
+        adult_ticket.SetTicketType(TicketType.ADULT);
 
-        child_ticket.setQuantity(5);
-        child_ticket.setTicketType(TicketType.CHILD);
+        child_ticket.SetQuantity(5);
+        child_ticket.SetTicketType(TicketType.CHILD);
 
-        elder_ticket.setQuantity(3);
-        elder_ticket.setTicketType(TicketType.ELDER);
+        elder_ticket.SetQuantity(3);
+        elder_ticket.SetTicketType(TicketType.ELDER);
 
         Vector<Order> tickets = new Vector<>();
         tickets.add(adult_ticket);
@@ -177,14 +177,14 @@ public class ut_ticketsystem {
     public void test_check_specific_orders_ticket_prices_give_correct_amount() {
 
         Order adult_ticket = new Order(), child_ticket = new Order(), elder_ticket = new Order();
-        adult_ticket.setQuantity(10);
-        adult_ticket.setTicketType(TicketType.ADULT);
+        adult_ticket.SetQuantity(10);
+        adult_ticket.SetTicketType(TicketType.ADULT);
 
-        child_ticket.setQuantity(5);
-        child_ticket.setTicketType(TicketType.CHILD);
+        child_ticket.SetQuantity(5);
+        child_ticket.SetTicketType(TicketType.CHILD);
 
-        elder_ticket.setQuantity(3);
-        elder_ticket.setTicketType(TicketType.ELDER);
+        elder_ticket.SetQuantity(3);
+        elder_ticket.SetTicketType(TicketType.ELDER);
 
         Vector<Order> tickets = new Vector<>();
         tickets.add(adult_ticket);
@@ -201,14 +201,14 @@ public class ut_ticketsystem {
     public void test_check_specific_orders_ticket_prices_throw_exception() {
 
         Order adult_ticket = new Order(), child_ticket = new Order(), elder_ticket = new Order();
-        adult_ticket.setQuantity(10);
-        adult_ticket.setTicketType(TicketType.ADULT);
+        adult_ticket.SetQuantity(10);
+        adult_ticket.SetTicketType(TicketType.ADULT);
 
-        child_ticket.setQuantity(5);
-        child_ticket.setTicketType(TicketType.CHILD);
+        child_ticket.SetQuantity(5);
+        child_ticket.SetTicketType(TicketType.CHILD);
 
-        elder_ticket.setQuantity(3);
-        elder_ticket.setTicketType(TicketType.ELDER);
+        elder_ticket.SetQuantity(3);
+        elder_ticket.SetTicketType(TicketType.ELDER);
 
         Vector<Order> tickets = new Vector<>();
         tickets.add(adult_ticket);

@@ -5,24 +5,24 @@ public class Order {
     public Order() {
     }
 
-    public Order(TicketType t, int q) {
-        type = t;
-        quantity = q;
+    public Order(TicketType type, int quantity) {
+        this.type = type;
+        this.quantity = quantity;
     }
 
-    public void setTicketType(TicketType t) {
-        type = t;
+    public void SetTicketType(TicketType type) {
+        this.type = type;
     }
 
-    public void setQuantity(int q) {
-        quantity = q;
+    public void SetQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
-    public TicketType getTicketType() {
-        return type;
+    public TicketType GetTicketType() {
+        return this.type;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int GetQuantity() {
+        return this.quantity;
     }
 }

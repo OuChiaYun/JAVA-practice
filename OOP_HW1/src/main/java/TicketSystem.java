@@ -4,10 +4,10 @@ public class TicketSystem {
 
     public static int CheckTicketPrice(Order ticket) {
         int price = 0; // 這裡挖空。
-        if (ticket.getQuantity() <= 0) {
+        if (ticket.GetQuantity() <= 0) {
             throw new IllegalArgumentException("There is at least one ticket.");
         }
-        switch (ticket.getTicketType()) {
+        switch (ticket.GetTicketType()) {
             case ADULT:
                 price = 350;
                 break;
@@ -18,9 +18,7 @@ public class TicketSystem {
                 price = 240;
                 break;
         }
-        return ticket.getQuantity() < 10
-                ? price * ticket.getQuantity()
-                : (int) (price * ticket.getQuantity() * 0.8);
+        return (int) (price * ticket.GetQuantity() * (ticket.GetQuantity() >= 10 ? 0.8 : 1));
         // 結束挖空。
     }
 
@@ -35,9 +33,10 @@ public class TicketSystem {
     public static int CheckTodayTicketSales(Vector<Order> tickets) {
         int total = 0;
         for (Order ticket : tickets) {
-            if (ticket.getQuantity() <= 0)
+            if (ticket.GetQuantity() <= 0) {
                 throw new IllegalArgumentException("There need at least one ticket.");
-            total += ticket.getQuantity();
+            }
+            total += ticket.GetQuantity();
         }
         return total;
     }
@@ -46,7 +45,7 @@ public class TicketSystem {
             Vector<Order> tickets) {
         int total = 0;
         for (Order ticket : tickets) {
-            if (ticket.getTicketType() == type) {
+            if (ticket.GetTicketType() == type) {
                 total += CheckTicketPrice(ticket);
             }
         }
