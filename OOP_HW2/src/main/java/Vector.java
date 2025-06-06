@@ -20,9 +20,6 @@ public class Vector {
         this.m_Data = Arrays.copyOf(other.m_Data, other.GetSize());
     };
 
-    public void swap(Vector v1, Vector v2) {
-    };
-
     public int GetSize() {
         return this.m_Size;
     };
@@ -49,10 +46,8 @@ public class Vector {
 
     };
 
-    public void InsertAt(int index, int value) {
-    };
-
     public void UpdateAt(int index, int value) {
+        this.m_Data[index] = value;
     };
 
     public void RemoveAt(int index) {
