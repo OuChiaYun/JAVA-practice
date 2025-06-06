@@ -65,10 +65,10 @@ public class Vector {
 
             while (this.m_Size + other.m_Size > tmp) {
                 tmp *= 2;
-            }
+            } // 重新分配m_Capacity長度
 
             this.m_Data = Arrays.copyOf(this.m_Data, tmp);
-            System.arraycopy(other.m_Data, 0, this.m_Data, this.m_Size, other.m_Size);
+            System.arraycopy(other.m_Data, 0, this.m_Data, this.m_Size, other.m_Size); // 複製至other.m_Data 至 this.m_Data
         } else {
             System.arraycopy(other.m_Data, 0, this.m_Data, this.m_Size + 1, other.m_Size);
 
