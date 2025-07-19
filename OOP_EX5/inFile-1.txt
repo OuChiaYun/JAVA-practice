@@ -1,0 +1,11 @@
+10 mary
+25 john
+35 mars
+50 lowe
+17 eric
+33 judy
+45 lisa
+70 carl
+27 luis
+8 kids
+40 kite
