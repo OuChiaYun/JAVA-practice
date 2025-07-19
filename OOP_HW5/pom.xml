@@ -2,9 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
-  <artifactId>OOP_HW5</artifactId>
+  <artifactId>OOP_HW3</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>Archetype - OOP_HW5</name>
+  <name>Archetype - OOP_HW3</name>
   <url>http://maven.apache.org</url>
 
   <dependencies>
