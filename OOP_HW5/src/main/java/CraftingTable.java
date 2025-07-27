@@ -4,8 +4,11 @@ public final class CraftingTable {
     private Armor output;
 
     public void CraftArmor() {
-        if (this.input == null || this.output != null) {
-            throw new RuntimeException("Output is empty");
+        if (this.input == null) {
+            throw new RuntimeException("No input to smelt");
+        }
+        if (this.output != null) {
+            throw new RuntimeException("Output not yet collected");
         }
 
         this.output = input.CraftArmor();
