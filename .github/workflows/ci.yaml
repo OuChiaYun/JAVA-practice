@@ -1,0 +1,30 @@
+name: Java CI for OOP_HW5 (Maven)
+
+on:
+  push:
+    paths:
+      - 'OOP_HW5/**'
+  pull_request:
+    paths:
+      - 'OOP_HW5/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: OOP_HW5
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Build and test with Maven
+      run: mvn clean verify
