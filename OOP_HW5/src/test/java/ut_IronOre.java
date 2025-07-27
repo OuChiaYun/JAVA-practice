@@ -1,11 +1,11 @@
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ut_CopperOre {
+public class ut_IronOre {
 
     @Test
-    public void COPPERORE_TEST_check_breakability_for_each_pickaxe_type() {
-        CopperOre ore = new CopperOre();
+    public void IRON_ORE_TEST_check_breakability_for_each_pickaxe_type() {
+        IronOre ore = new IronOre();
 
         assertThat(ore.BreakableBy(Pickaxe.Wood)).isFalse();
         assertThat(ore.BreakableBy(Pickaxe.Stone)).isTrue();
@@ -15,11 +15,10 @@ public class ut_CopperOre {
     }
 
     @Test
-    public void COPPERORE_TEST_check_copperore_can_be_smelted_to_copperingot() {
-        CopperOre ore = new CopperOre();
+    public void IRON_ORE_TEST_check_can_be_smelted_into_iron_ingot() {
+        IronOre ore = new IronOre();
 
-        CopperIngot ingot = (CopperIngot) ore.Smelt();
-
-        assertThat(ingot).isNotNull();
+        Object result = ore.Smelt();
+        assertThat(result).isInstanceOf(IronIngot.class);
     }
 }

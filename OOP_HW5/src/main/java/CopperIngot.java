@@ -1,3 +1,3 @@
-public class CopperIngot {
+public class CopperIngot extends Ingot {
 
 }

@@ -1,3 +1,5 @@
-public class Armor {
-
+public enum Armor {
+    Iron,
+    Gold,
+    Diamond,
 }
