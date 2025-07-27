@@ -2,33 +2,27 @@ public class GoldOre extends Ore implements ISmeltable {
 
     @Override
     public Boolean BreakableBy(Pickaxe axe) {
-        Boolean flag = true;
 
         switch (axe) {
             case Wood:
-                flag = false;
-                break;
+                return false;
 
             case Stone:
-                flag = false;
-                break;
+                return false;
 
             case Gold:
-                flag = false;
-                break;
+                return false;
 
             case Iron:
-                flag = true;
-                break;
+                return true;
 
             case Diamond:
-                flag = true;
-                break;
+                return true;
 
             default:
-                break;
+                return true;
+
         }
-        return flag;
     };
 
     public Ingot Smelt() {
