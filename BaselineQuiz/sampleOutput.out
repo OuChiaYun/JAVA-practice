@@ -1,0 +1,27 @@
+[500] Tony is in danger! Cause: sensor2 123.0
+[600] Mark is in danger! Cause: sensor1 123.0
+[1000] sensor2 falls
+[1200] sensor1 falls
+[1500] Tony is in danger! Cause: sensor2 200.0
+[2000] sensor2 falls
+[2400] sensor1 falls
+[2500] sensor2 falls
+[3000] sensor1 falls
+[3000] sensor2 falls
+patient Mark
+BloodPressureSensor sensor1
+[0] 150.0
+[600] 123.0
+[1200] -1.0
+[1800] 200.0
+[2400] -1.0
+[3000] -1.0
+patient Tony
+BloodPressureSensor sensor2
+[0] 150.0
+[500] 123.0
+[1000] -1.0
+[1500] 200.0
+[2000] -1.0
+[2500] -1.0
+[3000] -1.0

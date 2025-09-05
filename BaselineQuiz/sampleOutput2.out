@@ -1,0 +1,13 @@
+Input Error
+[600] Mark is in danger! Cause: sensor1 123.0
+[1200] sensor1 falls
+[2400] sensor1 falls
+[3000] sensor1 falls
+patient Mark
+BloodPressureSensor sensor1
+[0] 150.0
+[600] 123.0
+[1200] -1.0
+[1800] 200.0
+[2400] -1.0
+[3000] -1.0
